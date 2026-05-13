@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  /* Paper-cream surface, warm ink, surgical accents */
+  --color-paper: #F5F1EA;
+  --color-paper-shadow: #ECE4D3;
+  --color-paper-line: #E3DBC8;
+  --color-ink: #1A1814;
+  --color-ink-soft: #4A4641;
+  --color-ink-mute: #8A8478;
+  --color-violet: #5B52F0;
+  --color-violet-soft: #948CFA;
+  --color-coral: #F76A78;
+  --color-amber: #F5B544;
+  --color-cyan: #2BB3C7;
+
+  --font-display: "Instrument Serif", "Times New Roman", serif;
+  --font-sans: "Geist", system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+
+  --radius-card: 18px;
+}
+
+html, body, #root {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Subtle paper grain — a layered noise via SVG data URI, low opacity. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.09 0 0 0 0 0.07 0 0 0 0.08 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  opacity: 0.45;
+  mix-blend-mode: multiply;
+}
+
+.font-display { font-family: var(--font-display); font-weight: 400; letter-spacing: -0.01em; }
+.font-mono    { font-family: var(--font-mono); }
+
+/* Tiny decorative tools */
+.hairline { background: var(--color-paper-line); height: 1px; }
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes drift {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+@keyframes ringspin {
+  to { transform: rotate(360deg); }
+}
+
+.reveal { opacity: 0; animation: fade-up 900ms cubic-bezier(.2,.7,.2,1) forwards; }
+.reveal-slow { opacity: 0; animation: fade-up 1200ms cubic-bezier(.2,.7,.2,1) forwards; }
+.reveal-fade { opacity: 0; animation: fade-in 1400ms ease forwards; }
+
+/* Phone mock drift */
+.drift { animation: drift 7s ease-in-out infinite; }
+
+/* Marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track { animation: marquee 38s linear infinite; }
+
+/* Story ring gradient (matches iOS Theme.storyRingColors) */
+.ring-story {
+  background: conic-gradient(from 210deg, #FCB546, #F76A78, #9E52F7, #4677FE, #FCB546);
+}
+.ring-company {
+  background: conic-gradient(from 210deg, #5B52F0, #4677FE, #2BB3C7, #5B52F0);
+}
+
+/* Selection */
+::selection { background: var(--color-violet); color: #fff; }
