@@ -1,20 +1,20 @@
-type Story = { initials: string; name: string; kind?: 'company' | 'story'; seen?: boolean }
-type ChatRow = { mono: string; name: string; preview: string; time: string; unread?: number; tint?: string }
+type Story = { initials: string; name: string; kind?: 'company' | 'story'; seen?: boolean; presence?: 'online' }
+type ChatRow = { mono: string; name: string; preview: string; time: string; unread?: number; tint?: string; typing?: boolean; presence?: 'online' }
 
 const stories: Story[] = [
   { initials: 'LH', name: 'Lighthouse', kind: 'company' },
-  { initials: 'MR', name: 'Maya' },
-  { initials: 'JN', name: 'Jonas' },
+  { initials: 'MR', name: 'Maya', presence: 'online' },
+  { initials: 'JN', name: 'Jonas', presence: 'online' },
   { initials: 'PV', name: 'Priya' },
   { initials: 'TO', name: 'Theo', seen: true },
   { initials: 'AL', name: 'Alma', seen: true },
 ]
 
 const chats: ChatRow[] = [
-  { mono: 'MR', name: 'Maya Reyes', preview: 'pushed the onboarding revisions — take a look when…', time: '9:42', unread: 2, tint: '#FAD8DD' },
-  { mono: 'DS', name: 'Design Studio', preview: 'Theo: tomorrow’s review pushed to 4pm CET 🎯', time: '9:31', tint: '#DCDAFB' },
-  { mono: 'JN', name: 'Jonas Bekker', preview: 'voice note · 0:24', time: '8:55', unread: 1, tint: '#D4EEF2' },
-  { mono: 'OS', name: 'On-site / Lisbon', preview: 'Priya posted a story', time: 'Wed', tint: '#FBE5C7' },
+  { mono: 'MR', name: 'Maya Reyes', preview: '', time: 'now', unread: 2, tint: '#FAD8DD', typing: true, presence: 'online' },
+  { mono: '#', name: '# announcements', preview: 'Lighthouse: we shipped iOS 1.2 today ✺', time: '9:31', tint: '#DCDAFB' },
+  { mono: 'JN', name: 'Jonas Bekker', preview: 'voice note · 0:24 🎙', time: '8:55', unread: 1, tint: '#D4EEF2', presence: 'online' },
+  { mono: 'OS', name: '# on-site / lisbon', preview: 'Priya posted a story', time: 'Wed', tint: '#FBE5C7' },
   { mono: 'AL', name: 'Alma & Yusuf', preview: 'we’ll grab dinner at that place near…', time: 'Wed', tint: '#E8E2D5' },
 ]
 
@@ -73,14 +73,22 @@ export function PhoneMock() {
                 </div>
                 {stories.map((s) => (
                   <div key={s.name} className="flex flex-col items-center">
-                    <div
-                      className={`grid h-[54px] w-[54px] place-items-center rounded-full p-[2px] ${
-                        s.seen ? 'bg-(--color-paper-line)' : s.kind === 'company' ? 'ring-company' : 'ring-story'
-                      }`}
-                    >
-                      <div className="grid h-full w-full place-items-center rounded-full bg-(--color-paper)">
-                        <span className="font-display text-[15px] leading-none text-(--color-ink)">{s.initials}</span>
+                    <div className="relative">
+                      <div
+                        className={`grid h-[54px] w-[54px] place-items-center rounded-full p-[2px] ${
+                          s.seen ? 'bg-(--color-paper-line)' : s.kind === 'company' ? 'ring-company' : 'ring-story'
+                        }`}
+                      >
+                        <div className="grid h-full w-full place-items-center rounded-full bg-(--color-paper)">
+                          <span className="font-display text-[15px] leading-none text-(--color-ink)">{s.initials}</span>
+                        </div>
                       </div>
+                      {s.presence === 'online' && (
+                        <span
+                          className="absolute -bottom-[1px] -right-[1px] h-[12px] w-[12px] rounded-full ring-2 ring-(--color-paper)"
+                          style={{ background: '#3CB876' }}
+                        />
+                      )}
                     </div>
                     <div className="mt-1 max-w-[58px] truncate font-mono text-[8.5px] uppercase tracking-[0.12em] text-(--color-ink-soft)">
                       {s.name}
@@ -100,11 +108,19 @@ export function PhoneMock() {
             <ul className="px-3 py-2">
               {chats.map((c) => (
                 <li key={c.name} className="flex items-center gap-3 rounded-2xl px-2 py-2.5 transition-colors hover:bg-(--color-paper-shadow)/60">
-                  <div
-                    className="grid h-10 w-10 shrink-0 place-items-center rounded-xl text-[11px] font-semibold text-(--color-ink)"
-                    style={{ background: c.tint ?? '#E8E2D5' }}
-                  >
-                    {c.mono}
+                  <div className="relative">
+                    <div
+                      className="grid h-10 w-10 shrink-0 place-items-center rounded-xl text-[11px] font-semibold text-(--color-ink)"
+                      style={{ background: c.tint ?? '#E8E2D5' }}
+                    >
+                      {c.mono}
+                    </div>
+                    {c.presence === 'online' && (
+                      <span
+                        className="absolute -bottom-[1px] -right-[1px] h-[10px] w-[10px] rounded-full ring-2 ring-(--color-paper)"
+                        style={{ background: '#3CB876' }}
+                      />
+                    )}
                   </div>
                   <div className="min-w-0 flex-1">
                     <div className="flex items-baseline justify-between gap-2">
@@ -112,7 +128,14 @@ export function PhoneMock() {
                       <div className="font-mono text-[9.5px] text-(--color-ink-mute)">{c.time}</div>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="truncate text-[11px] text-(--color-ink-soft)">{c.preview}</div>
+                      {c.typing ? (
+                        <div className="flex items-center gap-1.5 text-[11px] italic text-(--color-violet)">
+                          <TypingDots />
+                          <span>typing…</span>
+                        </div>
+                      ) : (
+                        <div className="truncate text-[11px] text-(--color-ink-soft)">{c.preview}</div>
+                      )}
                       {c.unread ? (
                         <span className="grid h-[16px] min-w-[16px] place-items-center rounded-full bg-(--color-violet) px-1 font-mono text-[9px] text-white">
                           {c.unread}
@@ -149,6 +172,16 @@ export function PhoneMock() {
         </div>
       </div>
     </div>
+  )
+}
+
+function TypingDots() {
+  return (
+    <span className="inline-flex items-end gap-[3px]">
+      <span className="inline-block h-[4px] w-[4px] rounded-full bg-(--color-violet) [animation:typing_1200ms_ease-in-out_infinite]" />
+      <span className="inline-block h-[4px] w-[4px] rounded-full bg-(--color-violet) [animation:typing_1200ms_ease-in-out_infinite] [animation-delay:160ms]" />
+      <span className="inline-block h-[4px] w-[4px] rounded-full bg-(--color-violet) [animation:typing_1200ms_ease-in-out_infinite] [animation-delay:320ms]" />
+    </span>
   )
 }
 

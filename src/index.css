@@ -63,6 +63,10 @@ body::before {
 @keyframes ringspin {
   to { transform: rotate(360deg); }
 }
+@keyframes typing {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30%           { transform: translateY(-3px); opacity: 1; }
+}
 
 .reveal { opacity: 0; animation: fade-up 900ms cubic-bezier(.2,.7,.2,1) forwards; }
 .reveal-slow { opacity: 0; animation: fade-up 1200ms cubic-bezier(.2,.7,.2,1) forwards; }

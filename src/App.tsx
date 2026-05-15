@@ -5,6 +5,7 @@ import { Statement } from './components/Statement'
 import { Pillars } from './components/Pillars'
 import { Stories } from './components/Stories'
 import { Workspaces } from './components/Workspaces'
+import { Identity } from './components/Identity'
 import { Notes } from './components/Notes'
 import { Pricing } from './components/Pricing'
 import { CTA } from './components/CTA'
@@ -20,6 +21,7 @@ export default function App() {
       <Pillars />
       <Stories />
       <Workspaces />
+      <Identity />
       <Notes />
       <Pricing />
       <CTA />

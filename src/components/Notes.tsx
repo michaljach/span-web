@@ -4,7 +4,7 @@ export function Notes() {
       <div className="grid gap-10 md:grid-cols-12">
         <div className="md:col-span-4">
           <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-(--color-ink-mute)">
-            (07) — Notes from the build
+            (08) — Notes from the build
           </div>
           <h2 className="mt-4 font-display text-[40px] leading-[1] tracking-tight md:text-[52px]">
             A few small <em className="font-display italic text-(--color-violet)">opinions</em>.

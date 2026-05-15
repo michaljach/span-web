@@ -39,8 +39,9 @@ export function Hero() {
             style={{ animationDelay: '420ms' }}
           >
             Span is a <em className="font-display italic text-(--color-ink)">private social network</em> for
-            your company — chat, stories, and the people behind them, in one place. No
-            public feed, no strangers. Just the team, somewhere they actually want to open.
+            your company — chat, stories, and the people behind them, in one place. It's
+            quietly alive: presence, typing, reactions, voice notes. No public feed, no
+            strangers. Just the team, somewhere they actually want to open.
           </p>
 
           <div className="reveal mt-10 flex flex-wrap items-center gap-4" style={{ animationDelay: '560ms' }}>
