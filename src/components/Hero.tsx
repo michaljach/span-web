@@ -2,44 +2,13 @@ import { PhoneMock } from './PhoneMock'
 
 export function Hero() {
   return (
-    <section id="top" className="relative mx-auto max-w-[1240px] px-6 pt-4 pb-24 md:px-10 md:pt-6 md:pb-32">
-      {/* Spec strip */}
-      <div
-        className="reveal mb-14 flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-[10px] uppercase tracking-[0.22em] text-(--color-ink-mute)"
-        style={{ animationDelay: '120ms' }}
-      >
-        <span className="text-(--color-ink-soft)">INTERKOM/v1.2</span>
-        <span className="h-px w-6 bg-(--color-paper-edge)" />
-        <span>Private social network for your company</span>
-        <span className="h-px w-6 bg-(--color-paper-edge)" />
-        <span>iOS · build 240518</span>
-        <span className="h-px w-6 bg-(--color-paper-edge)" />
-        <span className="inline-flex items-center gap-1.5">
-          <span className="inline-block h-[5px] w-[5px] rounded-full" style={{ background: '#3CB876' }} />
-          beta · open
-        </span>
-      </div>
-
+    <section id="top" className="relative mx-auto max-w-[1240px] px-6 pt-10 pb-24 md:px-10 md:pt-16 md:pb-32">
       <div className="grid items-start gap-14 md:grid-cols-12 md:gap-10">
         {/* Headline column */}
         <div className="md:col-span-7">
-          {/* Icon */}
-          <div className="reveal mb-10" style={{ animationDelay: '160ms' }}>
-            <div className="glow inline-block">
-              <img
-                src="./icon.png"
-                alt=""
-                width={88}
-                height={88}
-                className="block h-[88px] w-[88px] select-none"
-                draggable={false}
-              />
-            </div>
-          </div>
-
           <h1
             className="reveal-slow font-display text-[44px] font-medium leading-[0.96] tracking-[-0.035em] text-(--color-ink) sm:text-[58px] md:text-[76px] lg:text-[92px]"
-            style={{ animationDelay: '220ms' }}
+            style={{ animationDelay: '120ms' }}
           >
             A private<br />
             social network<br />
