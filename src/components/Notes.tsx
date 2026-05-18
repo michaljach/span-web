@@ -20,7 +20,7 @@ export function Notes() {
             {
               n: '01',
               title: 'Notifications are a privilege.',
-              body: 'Span ships with quiet hours on by default. The app should earn its way to your lock screen, not assume it.',
+              body: 'Interkom ships with quiet hours on by default. The app should earn its way to your lock screen, not assume it.',
             },
             {
               n: '02',

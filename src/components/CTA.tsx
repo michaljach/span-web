@@ -27,7 +27,7 @@ export function CTA() {
               // SEC.10 · the beta
             </div>
             <h2 className="mt-4 font-display text-[40px] font-medium leading-[0.98] tracking-[-0.03em] md:text-[60px]">
-              We're opening Span up,<br />
+              We're opening Interkom up,<br />
               <span className="text-(--color-coral)">slowly</span>.
             </h2>
             <p className="mt-5 max-w-[34rem] text-[14.5px] leading-[1.6] text-(--color-ink-soft)">

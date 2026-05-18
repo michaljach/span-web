@@ -24,7 +24,7 @@ const plans: Plan[] = [
       'Up to 5 teammates',
       'Full message history — no 90-day wall',
       'Stories, channels & DMs',
-      'One workspace · yourname.span.io',
+      'One workspace · yourname.interkom.io',
       'iOS app, native from day one',
     ],
   },
@@ -234,7 +234,7 @@ function Compare({ label, us, them, themLabel }: { label: string; us: string; th
       <div className="font-mono text-[9.5px] uppercase tracking-[0.16em] text-(--color-ink-mute)">{label}</div>
       <div className="mt-2 flex items-baseline gap-2">
         <div className="font-display text-[24px] font-medium leading-none tracking-[-0.02em] text-(--color-ink)">{us}</div>
-        <div className="font-mono text-[9.5px] uppercase tracking-[0.14em] text-(--color-violet)">Span</div>
+        <div className="font-mono text-[9.5px] uppercase tracking-[0.14em] text-(--color-violet)">Interkom</div>
       </div>
       <div className="mt-1 flex items-baseline gap-2">
         <div className="font-display text-[15px] font-medium leading-none text-(--color-ink-mute) line-through decoration-(--color-coral)/70">

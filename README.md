@@ -1,6 +1,7 @@
 # span-web
 
-Static landing page for **Span** — a workplace team app.
+Static landing page for **Interkom** — a private network for your company.
+(Repo named `span-web` for historical reasons.)
 Built with Vite + React + TypeScript + Tailwind v4.
 
 ## Develop

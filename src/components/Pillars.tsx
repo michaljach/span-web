@@ -25,7 +25,7 @@ const pillars: Pillar[] = [
     num: '04',
     title: 'A space that feels',
     accent: 'like a building.',
-    body: 'Each workspace gets its own home at slug.span.io — your people, your channels, your stories. Invite the team. Lock the door.',
+    body: 'Each workspace gets its own home at slug.interkom.io — your people, your channels, your stories. Invite the team. Lock the door.',
     visual: 'spaces',
   },
 ]
@@ -44,7 +44,7 @@ export function Pillars() {
           </h2>
         </div>
         <p className="text-[14.5px] leading-[1.6] text-(--color-ink-soft) md:col-span-5">
-          We didn't try to rebuild every tool you use. Span does the parts of work that
+          We didn't try to rebuild every tool you use. Interkom does the parts of work that
           live between meetings — the messages, the moments, the people — and tries to
           do them with a little more grace.
         </p>

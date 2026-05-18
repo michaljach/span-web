@@ -9,7 +9,7 @@ export function Wordmark({ className = '', size = 'md' }: { className?: string; 
     <span className={`inline-flex items-center gap-2.5 ${className}`}>
       <IconGlyph size={sizes.glyph} />
       <span className={`font-mono font-semibold uppercase tracking-[0.18em] ${sizes.text}`}>
-        span
+        interkom
       </span>
     </span>
   )

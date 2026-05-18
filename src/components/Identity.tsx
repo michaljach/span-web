@@ -6,7 +6,7 @@ export function Identity() {
           <div className="relative h-[440px]">
             <IdentityCard
               workspace="Lighthouse"
-              slug="lighthouse.span.io"
+              slug="lighthouse.interkom.io"
               name="Maya Reyes"
               role="Engineering · she/her"
               handle="@maya"
@@ -17,7 +17,7 @@ export function Identity() {
             />
             <IdentityCard
               workspace="Field Notes"
-              slug="fieldnotes.span.io"
+              slug="fieldnotes.interkom.io"
               name="m."
               role="just here for the photos"
               handle="@mreyes"
@@ -28,7 +28,7 @@ export function Identity() {
             />
             <IdentityCard
               workspace="Atlas Studio"
-              slug="atlas-studio.span.io"
+              slug="atlas-studio.interkom.io"
               name="Maya R."
               role="Contract · weekends only"
               handle="@maya.r"
@@ -50,7 +50,7 @@ export function Identity() {
           </h2>
           <p className="mt-7 max-w-[34rem] text-[15px] leading-[1.6] text-(--color-ink-soft)">
             You aren't the same person at your day job, your weekend studio, and the
-            group chat that's somehow still going from college. Span knows that. Pick a
+            group chat that's somehow still going from college. Interkom knows that. Pick a
             different name, photo, and handle at each workspace — no more
             corporate-headshot-meets-friend-group energy.
           </p>

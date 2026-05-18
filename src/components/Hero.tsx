@@ -8,7 +8,7 @@ export function Hero() {
         className="reveal mb-14 flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-[10px] uppercase tracking-[0.22em] text-(--color-ink-mute)"
         style={{ animationDelay: '120ms' }}
       >
-        <span className="text-(--color-ink-soft)">SPAN/v1.2</span>
+        <span className="text-(--color-ink-soft)">INTERKOM/v1.2</span>
         <span className="h-px w-6 bg-(--color-paper-edge)" />
         <span>Private network for your company</span>
         <span className="h-px w-6 bg-(--color-paper-edge)" />
@@ -64,7 +64,7 @@ export function Hero() {
             className="reveal mt-10 max-w-[36rem] text-[16px] leading-[1.55] text-(--color-ink-soft) md:text-[17px]"
             style={{ animationDelay: '440ms' }}
           >
-            SPAN is a network you run inside your company — chat, stories, channels, and
+            Interkom is a network you run inside your company — chat, stories, channels, and
             the people behind them. It's quietly alive: presence, typing, reactions, voice
             notes. No public feed. No strangers. Workspace-scoped, end-to-end.
           </p>

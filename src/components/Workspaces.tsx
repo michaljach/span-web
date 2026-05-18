@@ -20,7 +20,7 @@ export function Workspaces() {
               Your team gets <span className="text-(--color-violet)">an address.</span>
             </h2>
             <p className="mt-6 max-w-[34rem] text-[14.5px] leading-[1.6] text-(--color-ink-soft)">
-              Every Span workspace lives at a clean little URL — your handle, your home.
+              Every Interkom workspace lives at a clean little URL — your handle, your home.
               People join by invite, leave by choice, and you get a real boundary between
               "the team" and "the internet."
             </p>
@@ -110,7 +110,7 @@ function WorkspaceCard({
         <div>
           <div className="font-display text-[17px] font-medium leading-none tracking-[-0.02em]">{name}</div>
           <div className="mt-1.5 font-mono text-[9px] uppercase tracking-[0.14em] text-(--color-ink-mute)">
-            {slug}.span.io
+            {slug}.interkom.io
           </div>
         </div>
       </div>
