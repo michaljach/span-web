@@ -24,8 +24,8 @@ export function Hero() {
         {/* Headline column */}
         <div className="md:col-span-7">
           {/* Icon */}
-          <div className="reveal mb-10 inline-flex items-center gap-5" style={{ animationDelay: '160ms' }}>
-            <div className="glow">
+          <div className="reveal mb-10" style={{ animationDelay: '160ms' }}>
+            <div className="glow inline-block">
               <img
                 src="./icon.png"
                 alt=""
@@ -34,11 +34,6 @@ export function Hero() {
                 className="block h-[88px] w-[88px] select-none"
                 draggable={false}
               />
-            </div>
-            <div className="font-mono text-[10px] uppercase leading-relaxed tracking-[0.18em] text-(--color-ink-mute)">
-              <div className="text-(--color-ink-soft)">// THE APP</div>
-              <div>9.6 MB · iOS 17+</div>
-              <div>swift · supabase · realtime</div>
             </div>
           </div>
 
