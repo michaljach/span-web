@@ -10,7 +10,7 @@ export function Hero() {
       >
         <span className="text-(--color-ink-soft)">INTERKOM/v1.2</span>
         <span className="h-px w-6 bg-(--color-paper-edge)" />
-        <span>Private network for your company</span>
+        <span>Private social network for your company</span>
         <span className="h-px w-6 bg-(--color-paper-edge)" />
         <span>iOS · build 240518</span>
         <span className="h-px w-6 bg-(--color-paper-edge)" />
@@ -47,7 +47,7 @@ export function Hero() {
             style={{ animationDelay: '220ms' }}
           >
             A private<br />
-            network<br />
+            social network<br />
             <span className="text-(--color-ink-mute)">for your</span>{' '}
             <span className="relative inline-block text-(--color-ink)">
               company
@@ -64,7 +64,7 @@ export function Hero() {
             className="reveal mt-10 max-w-[36rem] text-[16px] leading-[1.55] text-(--color-ink-soft) md:text-[17px]"
             style={{ animationDelay: '440ms' }}
           >
-            Interkom is a network you run inside your company — chat, stories, channels, and
+            Interkom is a social network you run inside your company — chat, stories, channels, and
             the people behind them. It's quietly alive: presence, typing, reactions, voice
             notes. No public feed. No strangers. Workspace-scoped, end-to-end.
           </p>

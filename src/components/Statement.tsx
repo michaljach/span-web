@@ -16,7 +16,7 @@ export function Statement() {
 
         <div className="md:col-span-9">
           <p className="font-display text-[36px] font-medium leading-[1.08] tracking-[-0.03em] text-(--color-ink-soft) sm:text-[48px] md:text-[60px] lg:text-[68px]">
-            <span className="text-(--color-ink)">Think of it as a private network</span>{' '}
+            <span className="text-(--color-ink)">Think of it as a private social network</span>{' '}
             running <span className="text-(--color-ink)">inside your company</span> —
             not{' '}
             <s className="text-(--color-ink-mute) decoration-(--color-coral) decoration-[3px] underline-offset-4">

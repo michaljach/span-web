@@ -8,7 +8,7 @@ export function Footer() {
         <div className="md:col-span-6">
           <Wordmark size="lg" />
           <p className="mt-5 max-w-[24rem] font-mono text-[12px] uppercase leading-relaxed tracking-[0.16em] text-(--color-ink-soft)">
-            // a private network for your company.
+            // a private social network for your company.
           </p>
         </div>
 
