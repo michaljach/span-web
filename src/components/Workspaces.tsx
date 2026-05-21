@@ -29,7 +29,7 @@ export function Workspaces() {
             <div className="mt-9 inline-flex items-center gap-0 border border-(--color-paper-edge) bg-(--color-paper-shadow) p-1.5 pl-5 font-mono text-[13px] text-(--color-ink-soft)">
               <span className="text-(--color-ink-mute)">https://</span>
               <span className="text-(--color-violet-soft)">lighthouse</span>
-              <span className="text-(--color-ink-soft)">.span.io</span>
+              <span className="text-(--color-ink-soft)">.interkom.app</span>
               <span className="ml-3 inline-flex items-center gap-1 bg-(--color-ink) px-3 py-1.5 text-[11px] uppercase tracking-[0.16em] text-(--color-paper)">
                 claim →
               </span>

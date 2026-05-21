@@ -19,7 +19,7 @@ const plans: Plan[] = [
     blurb: 'For the first five people. Real product, not a 90-day teaser.',
     price: { annual: '$0', monthly: '$0' },
     cadence: 'forever',
-    cta: { label: 'Start free', href: '#beta' },
+    cta: { label: 'Start free', href: '#apps' },
     features: [
       'Up to 5 teammates',
       'Full message history — no 90-day wall',
@@ -34,7 +34,7 @@ const plans: Plan[] = [
     blurb: 'The plan most teams land on. Roughly the price of a coffee per person.',
     price: { annual: '$5', monthly: '$6' },
     cadence: 'per teammate / month',
-    cta: { label: 'Start a team', href: '#beta' },
+    cta: { label: 'Start a team', href: '#apps' },
     highlight: true,
     ribbon: 'most teams pick this',
     features: [
@@ -50,7 +50,7 @@ const plans: Plan[] = [
     tagline: 'ENTERPRISE',
     blurb: 'Studios, agencies, and companies past 100 people. We tailor the edges.',
     price: { custom: true, label: "Let's talk" },
-    cta: { label: 'Contact sales', href: '#beta' },
+    cta: { label: 'Contact sales', href: '#apps' },
     features: [
       'SAML SSO · SCIM provisioning',
       'Custom domain (chat.your-co.com)',
@@ -69,7 +69,7 @@ export function Pricing() {
       <div className="grid items-end gap-8 md:grid-cols-12">
         <div className="md:col-span-7">
           <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-(--color-ink-mute)">
-            // SEC.09 · pricing
+            // SEC.10 · pricing
           </div>
           <h2 className="mt-4 font-display text-[40px] font-medium leading-[1] tracking-[-0.03em] text-(--color-ink) md:text-[56px]">
             Fair, <span className="text-(--color-violet)">flat</span> prices.<br />

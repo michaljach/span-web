@@ -1,9 +1,14 @@
+import onboardingImg from '../assets/stories/story-onboarding.jpg'
+import lisbonImg from '../assets/stories/story-lisbon.jpg'
+import prImg from '../assets/stories/story-pr.jpg'
+import hiringImg from '../assets/stories/story-hiring.jpg'
+
 type StoryTile = {
   initials: string
   name: string
   time: string
   caption: string
-  gradient: string
+  image: string
 }
 
 const tiles: StoryTile[] = [
@@ -12,28 +17,28 @@ const tiles: StoryTile[] = [
     name: 'Maya',
     time: '12m',
     caption: 'shipped the onboarding draft',
-    gradient: 'linear-gradient(160deg, #F5B544, #FF6B7A 60%, #7E76FF)',
+    image: onboardingImg,
   },
   {
     initials: 'JN',
     name: 'Jonas',
     time: '1h',
     caption: 'view from the lisbon office',
-    gradient: 'linear-gradient(160deg, #2BB3C7, #4677FE 60%, #0A0A0A)',
+    image: lisbonImg,
   },
   {
     initials: 'PV',
     name: 'Priya',
     time: '2h',
     caption: 'the smallest possible PR',
-    gradient: 'linear-gradient(160deg, #FF6B7A, #9A52F7 55%, #4677FE)',
+    image: prImg,
   },
   {
     initials: 'LH',
     name: 'Lighthouse',
     time: '4h',
     caption: 'we’re hiring a senior designer',
-    gradient: 'linear-gradient(160deg, #0A0A0A, #7E76FF 55%, #2BB3C7)',
+    image: hiringImg,
   },
 ]
 
@@ -78,9 +83,23 @@ export function Stories() {
               <article
                 key={t.name}
                 className={`relative overflow-hidden rounded-(--radius-card) ${i % 2 === 0 ? 'translate-y-0' : 'translate-y-6 md:translate-y-10'}`}
-                style={{ background: t.gradient, aspectRatio: '3 / 4', border: '1px solid rgba(255,255,255,0.06)' }}
+                style={{ aspectRatio: '3 / 4', border: '1px solid rgba(255,255,255,0.06)' }}
               >
-                <div className="flex items-center gap-2 p-3.5">
+                <img
+                  src={t.image}
+                  alt={t.caption}
+                  className="absolute inset-0 h-full w-full object-cover"
+                  loading="lazy"
+                />
+                <div
+                  aria-hidden
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      'linear-gradient(180deg, rgba(10,10,10,0.5) 0%, rgba(10,10,10,0) 32%, rgba(10,10,10,0.15) 58%, rgba(10,10,10,0.82) 100%)',
+                  }}
+                />
+                <div className="relative flex items-center gap-2 p-3.5">
                   <div className="ring-story grid h-8 w-8 place-items-center rounded-full p-[2px]">
                     <div className="grid h-full w-full place-items-center rounded-full" style={{ background: '#0A0A0A' }}>
                       <span className="font-mono text-[10px] font-semibold text-(--color-ink)">{t.initials}</span>

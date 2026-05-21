@@ -113,7 +113,7 @@ function PillarVisual({ kind }: { kind: Pillar['visual'] }) {
         <span className="h-2 w-2 rounded-full" style={{ background: '#F5B544' }} />
         <span className="h-2 w-2 rounded-full" style={{ background: '#3CB876' }} />
         <div className="ml-2 flex-1 truncate font-mono text-[10.5px] text-(--color-ink-soft)">
-          lighthouse<span className="text-(--color-ink-mute)">.span.io</span>
+          lighthouse<span className="text-(--color-ink-mute)">.interkom.app</span>
         </div>
       </div>
       <div className="p-4">
