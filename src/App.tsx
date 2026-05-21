@@ -10,17 +10,24 @@ import { Apps } from './components/Apps'
 import { Pricing } from './components/Pricing'
 import { Footer } from './components/Footer'
 import { BillingResult } from './components/BillingResult'
+import { PrivacyPolicy } from './components/PrivacyPolicy'
 
 export default function App() {
+  const path = window.location.pathname.replace(/\/$/, '')
+
   // Stripe Checkout returns to /billing?billing=success|cancelled.
   // Only an explicit `success` shows the success page — anything else
   // (cancelled, an unexpected value, or none) is treated as not-paid.
-  if (window.location.pathname.replace(/\/$/, '') === '/billing') {
+  if (path === '/billing') {
     const status =
       new URLSearchParams(window.location.search).get('billing') === 'success'
         ? 'success'
         : 'cancelled'
     return <BillingResult status={status} />
+  }
+
+  if (path === '/privacy') {
+    return <PrivacyPolicy />
   }
 
   return (

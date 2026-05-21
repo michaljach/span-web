@@ -35,7 +35,7 @@ export function Footer() {
       <div className="mt-14 flex flex-wrap items-center justify-between gap-3 border-t border-(--color-paper-line) pt-6 font-mono text-[10px] uppercase tracking-[0.18em] text-(--color-ink-mute)">
         <div>© {new Date().getFullYear()} Interkom Labs · build 240518</div>
         <div className="flex items-center gap-5">
-          <a href="#" className="hover:text-(--color-ink)">Privacy</a>
+          <a href="/privacy" className="hover:text-(--color-ink)">Privacy</a>
           <a href="#" className="hover:text-(--color-ink)">Terms</a>
           <a href="#" className="hover:text-(--color-ink)">Press kit</a>
         </div>
