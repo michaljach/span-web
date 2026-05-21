@@ -9,8 +9,8 @@ type Platform = {
   cta: { label: string; href: string; glyph: 'apple' | 'globe' }
 }
 
-// TODO: swap the `#` hrefs for the real App Store listing, the macOS
-// .dmg download, and the deployed web-app URL once they're live.
+// TODO: swap the remaining `#` hrefs for the real App Store listing
+// and the macOS .dmg download once they're live. The web app is live.
 const platforms: Platform[] = [
   {
     label: 'iOS',
@@ -34,7 +34,7 @@ const platforms: Platform[] = [
     pitch: 'Nothing to install, nothing to update. Cold-starts in under a second and keeps every keyboard shortcut.',
     spec: 'Instant · no download',
     icon: 'web',
-    cta: { label: 'Open in your browser', href: '#', glyph: 'globe' },
+    cta: { label: 'Open in your browser', href: 'https://web.interkom.app', glyph: 'globe' },
   },
 ]
 
