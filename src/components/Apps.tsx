@@ -6,8 +6,11 @@ type Platform = {
   pitch: string
   spec: string
   icon: IconKind
+  cta: { label: string; href: string }
 }
 
+// TODO: swap the `#` hrefs for the real App Store listing, the macOS
+// .dmg download, and the deployed web-app URL once they're live.
 const platforms: Platform[] = [
   {
     label: 'iOS',
@@ -15,6 +18,7 @@ const platforms: Platform[] = [
     pitch: 'Built in Swift, not a web view in a costume. 60fps lists, real haptics, widgets, and the share sheet.',
     spec: 'SwiftUI · iOS 17+',
     icon: 'ios',
+    cta: { label: 'App Store', href: '#' },
   },
   {
     label: 'macOS',
@@ -22,6 +26,7 @@ const platforms: Platform[] = [
     pitch: 'Menu-bar presence, multiple windows, every ⌘ shortcut you reach for. Universal binary, tuned for Apple silicon.',
     spec: 'SwiftUI · Apple silicon',
     icon: 'mac',
+    cta: { label: 'Download for Mac', href: '#' },
   },
   {
     label: 'Web',
@@ -29,6 +34,7 @@ const platforms: Platform[] = [
     pitch: 'Nothing to install, nothing to update. Cold-starts in under a second and keeps every keyboard shortcut.',
     spec: 'Instant · no download',
     icon: 'web',
+    cta: { label: 'Open in browser', href: '#' },
   },
 ]
 
@@ -78,13 +84,22 @@ export function Apps() {
             <p className="mt-3 flex-1 text-[13.5px] leading-[1.6] text-(--color-ink-soft)">
               {p.pitch}
             </p>
-            <div className="mt-6 flex items-center justify-between border-t border-(--color-paper-line) pt-4">
+            <div className="mt-6 flex items-center justify-between gap-3 border-t border-(--color-paper-line) pt-4">
               <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-(--color-ink-mute)">
                 {p.spec}
               </span>
-              <span className="font-mono text-[11px] text-(--color-ink-mute) transition-colors group-hover:text-(--color-violet)">
-                ◆
-              </span>
+              <a
+                href={p.cta.href}
+                className="group/cta inline-flex shrink-0 items-center gap-1.5 border border-(--color-ink) px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.16em] text-(--color-ink) transition-colors hover:bg-(--color-ink) hover:text-(--color-paper)"
+              >
+                {p.cta.label}
+                <span
+                  aria-hidden
+                  className="transition-transform group-hover/cta:translate-x-0.5"
+                >
+                  →
+                </span>
+              </a>
             </div>
           </article>
         ))}
