@@ -22,7 +22,7 @@
             <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <enclosure
-                url="https://github.com/interkom-app/interkom-mac/releases/download/v1.0.0/Interkom-1.0.0.dmg"
+                url="https://github.com/interkom-app/interkom-releases/releases/download/v1.0.0/Interkom-1.0.0.dmg"
                 type="application/octet-stream"
                 sparkle:edSignature="iJxq+BeEsm9OTIJexhHLSeXVcvDz27c4lNbJDfeZcWnB+0s5KXHryYFSa4GJOb2bmfI7jBnA7yVF4PjIiPkUCg==" length="10360560" />
         </item>

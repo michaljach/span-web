@@ -13,7 +13,7 @@ type Platform = {
 // live. macOS points at GitHub Releases' "latest" redirect — Sparkle
 // handles in-app updates after first install.
 const MAC_DOWNLOAD_URL =
-  'https://github.com/interkom-app/interkom-mac/releases/latest/download/Interkom.dmg'
+  'https://github.com/interkom-app/interkom-releases/releases/latest/download/Interkom.dmg'
 
 const platforms: Platform[] = [
   {
