@@ -45,8 +45,8 @@ export function Identity() {
             // SEC.08 · per-workspace profiles
           </div>
           <h2 className="mt-4 font-display text-[40px] font-medium leading-[1] tracking-[-0.03em] md:text-[60px]">
-            A different <span className="text-(--color-violet)">you</span><br />
-            at every workspace.
+            A separate <span className="text-(--color-violet)">profile</span><br />
+            for every workspace.
           </h2>
           <p className="mt-7 max-w-[34rem] text-[15px] leading-[1.6] text-(--color-ink-soft)">
             You aren't the same person at your day job, your weekend studio, and the

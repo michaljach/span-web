@@ -21,9 +21,9 @@ export function Encryption() {
               // SEC.06 · end-to-end encryption
             </div>
             <h2 className="mt-5 font-display text-[40px] font-medium leading-[1] tracking-[-0.03em] md:text-[60px]">
-              Only the people in the room
+              End-to-end
               <br />
-              <span className="text-(--color-violet)">can read it.</span>
+              <span className="text-(--color-violet)">encryption.</span>
             </h2>
             <p className="mt-7 max-w-[34rem] text-[15px] leading-[1.6] text-(--color-ink-soft)">
               Every message, every photo, every voice note is sealed on your

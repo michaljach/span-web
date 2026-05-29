@@ -51,8 +51,8 @@ export function Stories() {
             // SEC.05 · stories
           </div>
           <h2 className="mt-4 font-display text-[40px] font-medium leading-[1] tracking-[-0.03em] md:text-[56px]">
-            The small stuff,<br />
-            <span className="text-(--color-coral)">in passing.</span>
+            24-hour stories<br />
+            <span className="text-(--color-coral)">for your team.</span>
           </h2>
           <p className="mt-6 max-w-[28rem] text-[14.5px] leading-[1.6] text-(--color-ink-soft)">
             Some things don’t need a thread or a stand-up. A photo of the prototype.

@@ -39,8 +39,8 @@ export function Pillars() {
             // SEC.02 — SEC.04 · what's inside
           </div>
           <h2 className="mt-4 font-display text-[40px] font-medium leading-[1] tracking-[-0.03em] text-(--color-ink) md:text-[56px]">
-            Three things,<br />
-            <span className="text-(--color-ink-mute)">sitting very close</span> together.
+            Messages, stories,<br />
+            <span className="text-(--color-ink-mute)">and team spaces.</span>
           </h2>
         </div>
         <p className="text-[14.5px] leading-[1.6] text-(--color-ink-soft) md:col-span-5">

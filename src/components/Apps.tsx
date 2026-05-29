@@ -57,8 +57,8 @@ export function Apps() {
             // SEC.10 · apps
           </div>
           <h2 className="mt-4 font-display text-[40px] font-medium leading-[1] tracking-[-0.03em] md:text-[56px]">
-            Native everywhere.<br />
-            <span className="text-(--color-violet)">Fast everywhere.</span>
+            Native apps for<br />
+            <span className="text-(--color-violet)">every platform.</span>
           </h2>
         </div>
         <p className="text-[14.5px] leading-[1.6] text-(--color-ink-soft) md:col-span-5">

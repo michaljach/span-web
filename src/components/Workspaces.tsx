@@ -17,7 +17,7 @@ export function Workspaces() {
               // SEC.07 · workspaces
             </div>
             <h2 className="mt-5 font-display text-[40px] font-medium leading-[1] tracking-[-0.03em] md:text-[56px]">
-              Your team gets <span className="text-(--color-violet)">an address.</span>
+              Your own workspace <span className="text-(--color-violet)">URL.</span>
             </h2>
             <p className="mt-6 max-w-[34rem] text-[14.5px] leading-[1.6] text-(--color-ink-soft)">
               Every Interkom workspace lives at a clean little URL — your handle, your home.
