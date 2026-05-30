@@ -30,6 +30,7 @@ const columns: { heading: string; links: Link[] }[] = [
     links: [
       { label: 'Notes', href: '#notes' },
       { label: 'GitHub', href: 'https://github.com/interkom-app' },
+      { label: 'Support', href: 'mailto:support@interkom.app' },
       { label: 'Contact sales', href: 'mailto:sales@interkom.app' },
       { label: 'Privacy', href: '/privacy' },
     ],
