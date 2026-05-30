@@ -15,36 +15,44 @@ export function Wordmark({ className = '', size = 'md' }: { className?: string; 
   )
 }
 
-// 38-dot ellipse lattice (5/7/7/7/7/5) — matches Frame 137.svg.
-const DOT_R = 1.9
-const ROWS: { y: number; xs: number[] }[] = [
-  { y: 12.8713, xs: [21.2947, 27.6472, 33.9998, 40.3533, 46.7058] },
-  { y: 18.9958, xs: [14.9412, 21.2947, 27.6472, 33.9998, 40.3533, 46.7058, 53.0584] },
-  { y: 25.1198, xs: [14.9412, 21.2947, 27.6472, 33.9998, 40.3533, 46.7058, 53.0584] },
-  { y: 31.2438, xs: [14.9412, 21.2947, 27.6472, 33.9998, 40.3533, 46.7058, 53.0584] },
-  { y: 37.3678, xs: [14.9412, 21.2947, 27.6472, 33.9998, 40.3533, 46.7058, 53.0584] },
-  { y: 43.4919, xs: [21.2947, 27.6472, 33.9998, 40.3533, 46.7058] },
-]
+// Interkom mark — a 3×3 dot grid with the top-right dot picked out in
+// brand violet. Ported from the web app's InterkomMark so the marketing
+// site and the product share one logo. Base dots render in currentColor
+// so the mark adapts to the surface; the accent dot uses the violet
+// brand token.
+const COLS = [6, 12, 18]
+const ROWS = [6, 12, 18]
+const DOT_R = 1.3
+const VIEW = 24
 
 export function IconGlyph({ size = 28 }: { size?: number }) {
-  const height = Math.round(size * (56 / 69))
+  // Top-right dot = last column, first row.
+  const accentX = COLS[COLS.length - 1]
+  const accentY = ROWS[0]
   return (
     <svg
       width={size}
-      height={height}
-      viewBox="0 0 69 56"
+      height={size}
+      viewBox={`0 0 ${VIEW} ${VIEW}`}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
       className="block select-none"
     >
-      <g fill="currentColor">
-        {ROWS.flatMap((row) =>
-          row.xs.map((x) => (
-            <circle key={`${x}-${row.y}`} cx={x} cy={row.y} r={DOT_R} opacity={0.75} />
-          )),
-        )}
-      </g>
+      {ROWS.map((y) =>
+        COLS.map((x) => {
+          const isAccent = x === accentX && y === accentY
+          return (
+            <circle
+              key={`${x}-${y}`}
+              cx={x}
+              cy={y}
+              r={DOT_R}
+              fill={isAccent ? 'var(--color-violet)' : 'currentColor'}
+            />
+          )
+        }),
+      )}
     </svg>
   )
 }

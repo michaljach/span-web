@@ -19,7 +19,7 @@ const plans: Plan[] = [
     blurb: 'For the first five people. Real product, not a 90-day teaser.',
     price: { annual: '$0', monthly: '$0' },
     cadence: 'forever',
-    cta: { label: 'Start free', href: '#apps' },
+    cta: { label: 'Start free', href: 'https://web.interkom.app/sign-up' },
     features: [
       'Up to 5 teammates',
       'Full message history — no 90-day wall',
@@ -34,7 +34,7 @@ const plans: Plan[] = [
     blurb: 'The plan most teams land on. Roughly the price of a coffee per person.',
     price: { annual: '$5', monthly: '$6' },
     cadence: 'per teammate / month',
-    cta: { label: 'Start a team', href: '#apps' },
+    cta: { label: 'Start a team', href: 'https://web.interkom.app/sign-up' },
     highlight: true,
     ribbon: 'most teams pick this',
     features: [
@@ -50,7 +50,7 @@ const plans: Plan[] = [
     tagline: 'ENTERPRISE',
     blurb: 'Studios, agencies, and companies past 100 people. We tailor the edges.',
     price: { custom: true, label: "Let's talk" },
-    cta: { label: 'Contact sales', href: '#apps' },
+    cta: { label: 'Contact sales', href: 'mailto:sales@interkom.app' },
     features: [
       'SAML SSO · SCIM provisioning',
       'Custom domain (chat.your-co.com)',
