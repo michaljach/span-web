@@ -40,10 +40,17 @@ export function Nav() {
         </span>
         <a
           href="#apps"
+          className="reveal hidden font-mono text-[11px] uppercase tracking-[0.16em] text-(--color-ink-soft) transition-colors hover:text-(--color-ink) sm:inline-flex"
+          style={{ animationDelay: '360ms' }}
+        >
+          Download
+        </a>
+        <a
+          href="https://web.interkom.app/sign-in"
           className="reveal group inline-flex items-center gap-2 border border-(--color-ink) bg-(--color-ink) px-4 py-2 font-mono text-[11px] uppercase tracking-[0.16em] text-(--color-paper) transition-colors hover:bg-(--color-paper) hover:text-(--color-ink)"
           style={{ animationDelay: '380ms' }}
         >
-          Download
+          Sign In
           <span aria-hidden className="transition-transform group-hover:translate-x-0.5">→</span>
         </a>
       </div>
